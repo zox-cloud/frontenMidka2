@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <h1>Recipe App</h1>
+    <input type="text" id="searchInput" placeholder="Search recipes by ingredients or dish name..." />
+    <button id="showFavoritesButton">Show Favorites</button>
+</header>
+
+<main class="main-container">
+    <section class="recipe-grid" id="recipeGrid">
+        <!-- рецепты карты сюда будет добавляться автоматический  -->
+    </section>
+</main>
+
+<!-- здесь будет показываться детали -->
+<div id="recipeModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2 id="recipeTitle"></h2>
+        <img id="recipeImage" alt="Recipe Image">
+        <h3>Ingredients</h3>
+        <ul id="ingredientsList"></ul>
+        <h3>Instructions</h3>
+        <p id="instructions"></p>
+        <h3>Nutritional Information</h3>
+        <p id="nutrition"></p>
+    </div>
+</div>
+
+
+<!-- реклама спонсора 150 запросов -->
+<footer class="footer">
+    <p>Powered by Spoonacular API</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

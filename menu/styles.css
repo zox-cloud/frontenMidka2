@@ -1,0 +1,231 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 1.2em 0.8em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #0056b3;
+}
+
+.header input {
+    width: 90%;
+    max-width: 400px;
+    padding: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.header input:focus {
+    border-color: #007bff;
+}
+
+.header button {
+    margin-top: 5px;
+    padding: 12px 24px;
+    background: #212529;
+    color: #f8f9fa;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.header button:hover {
+    background: #495057;
+}
+
+.main-container {
+    padding: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.recipe-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    margin: 0.75em;
+    font-size: 1.4em;
+    color: #007bff;
+}
+
+.recipe-card p {
+    margin: 0.5em 0.75em;
+    font-size: 1em;
+    color: #6c757d;
+}
+
+.recipe-card button {
+    margin: 0.5em 0.75em;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.recipe-card button:hover {
+    background: #0056b3;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 2em;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8em;
+    color: #6c757d;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #007bff;
+}
+
+.footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #212529;
+    color: #f8f9fa;
+    font-size: 0.9em;
+    margin-top: 1em;
+}
+
+@media (max-width: 768px) {
+    .header {
+        gap: 10px;
+    }
+
+    .header input {
+        max-width: 100%;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .recipe-card h3 {
+        font-size: 1.2em;
+    }
+
+    .recipe-card p {
+        font-size: 0.9em;
+    }
+
+    .recipe-card button {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 1em 0.5em;
+    }
+
+    .header input {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .header button {
+        font-size: 0.9em;
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-card img {
+        height: 150px;
+    }
+
+    .recipe-card h3 {
+        font-size: 1.1em;
+    }
+
+    .recipe-card p {
+        font-size: 0.85em;
+    }
+}
