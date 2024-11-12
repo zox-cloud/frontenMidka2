@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <!-- Поисковая строка и выбор города -->
+    <header>
+        <input type="text" id="city-search" placeholder="Enter city name..." autocomplete="off">
+        <button id="search-button">Search</button>
+        <button id="location-button">📍</button>
+        <select id="unit-toggle">
+            <option value="metric">Celsius</option>
+            <option value="imperial">Fahrenheit</option>
+        </select>
+    </header>
+
+    <!-- Основной блок текущей температуры и описания -->
+    <section class="current-weather">
+        <h1 id="city-name">City Name</h1>
+        <div id="main-temp">28°</div>
+        <p id="weather-description">Rainy Day</p>
+
+    </section>
+
+    <!-- Блоки с дополнительной информацией справа -->
+    <section class="weather-details">
+        <div class="detail" id="feels-like">
+            <h3>Feels Like</h3>
+            <p id="feels-like-temp">30°</p>
+            <small>Humidity is making it feel warmer</small>
+        </div>
+        <div class="detail" id="precipitation">
+            <h3>Precipitation</h3>
+            <p id="precipitation-value">2.3”</p>
+            <small>in last 24h</small>
+        </div>
+        <div class="detail" id="visibility">
+            <h3>Visibility</h3>
+            <p id="visibility-value">6 km</p>
+        </div>
+        <div class="detail" id="humidity">
+            <h3>Humidity</h3>
+            <p id="humidity-value">82%</p>
+            <small>The dew point is 25° right now</small>
+        </div>
+    </section>
+
+    <!-- Прогноз на несколько часов -->
+    <section class="hourly-forecast">
+        <h2>Hourly Forecast</h2>
+        <div id="hourly-forecast-container">
+            <!-- Прогноз на часы будет динамически добавляться сюда -->
+        </div>
+    </section>
+
+    <!-- Прогноз на 5 дней -->
+    <section class="daily-forecast">
+        <h2>5-Day Forecast</h2>
+        <div id="daily-forecast-container">
+            <!-- Прогноз на 5 дней будет динамически добавляться сюда -->
+        </div>
+    </section>
+
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
