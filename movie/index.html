@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Movies App</h1>
+</header>
+<div class="search-bar">
+    <input type="text" id="search" placeholder="Search for movies...">
+    <select id="sort-by">
+        <option value="popularity.desc">Popularity</option>
+        <option value="release_date.desc">Release Date</option>
+        <option value="vote_average.desc">Rating</option>
+    </select>
+    <button id="view-watchlist-btn">View Watchlist</button>
+</div>
+<div class="movies-grid" id="movies-grid"></div>
+
+<div class="modal hidden" id="movie-modal">
+    <div class="modal-content"></div>
+</div>
+
+<div id="toast-container"></div>
+
+<script src="index.js"></script>
+</body>
+</html>
